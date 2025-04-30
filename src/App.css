@@ -1,15 +1,29 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  background-color: #0a143d;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .content-container {
-  width: 100vw;
-  height: 100vh;
+  width: 80%;
+  height: auto;
   background-color: #09153e;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-logo-mode {
@@ -25,7 +39,7 @@
   align-items: center;
   border-radius: 10px;
   padding: 15px;
-  width: 80%;
+  width: 80vw;
   background-color: #212636;
 }
 
@@ -41,7 +55,7 @@
   border-radius: 5px;
 }
 
-.container-extension {
+.extension-buttons {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -51,7 +65,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   padding-top: 60px;
   color: white;
 }
@@ -74,4 +88,52 @@
 
 .container-buttons button:hover {
   background-color: #545969;
+}
+
+.container-extensions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 40px;
+}
+
+.extensions-list {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.extension {
+  display: flex;
+
+  color: white;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #212636;
+  width: 100%;
+  border: 1px solid #545969;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.img {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.info-extension {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.button-remove-add {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

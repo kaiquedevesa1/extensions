@@ -12,8 +12,10 @@ import Markup from "./assets/images/logo-markup-notes.svg";
 import Grid from "./assets/images/logo-grid-guides.svg";
 import Palette from "./assets/images/logo-palette-picker.svg";
 import LinkChecker from "./assets/images/logo-link-checker.svg";
-import DOM from "./assets/images/logo-dom-snapshot.svg";
+import DOMSnap from "./assets/images/logo-dom-snapshot.svg";
 import Console from "./assets/images/logo-console-plus.svg";
+
+import SwitchesSize from "./assets/components/Button";
 
 function App() {
   return (
@@ -44,61 +46,196 @@ function App() {
           <div className="container-extensions">
             <div className="extensions-list">
               <div className="extension">
-                <div className="img">
+                <div className="info-container">
                   <img src={DevLens} alt="" />
                   <div className="info-extension">
-                    <p>DevLens</p>
-                    <p>
+                    <p id="title">DevLens</p>
+                    <p id="info">
                       Quickly inspect page layouts and visualize element
                       boudaries.
                     </p>
                   </div>
-                  <div className="button-remove-add">
-                    <button>aa</button>
-                    <button>aaa</button>
-                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
                 </div>
               </div>
               <div className="extension">
-                <img src={StyleSpy} alt="" />
-                <p>StyleSpy</p>
+                <div className="info-container">
+                  <img src={StyleSpy} alt="" />
+                  <div className="info-extension">
+                    <p id="title">StyleSpy</p>
+                    <p id="info">
+                      Instantly analyze and copy CSS from any webpage element.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={SpeedBoost} alt="" />
-                <p>SpeedBoost</p>
+                <div className="info-container">
+                  <img src={SpeedBoost} alt="" />
+                  <div className="info-extension">
+                    <p id="title">SpeedBoost</p>
+                    <p id="info">
+                      Optimizes browser resource usage to accelerate pages
+                      loading.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={JSONWizard} alt="" />
-                <p>JSONWizard</p>
+                <div className="info-container">
+                  <img src={JSONWizard} alt="" />
+                  <div className="info-extension">
+                    <p id="title">JSONWizard</p>
+                    <p id="info">
+                      Formats, validates, and prettifies JSON responses
+                      in-browser.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={TabMasterPro} alt="" />
+                <div className="info-container">
+                  <img src={TabMasterPro} alt="" />
+                  <div className="info-extension">
+                    <p id="title">TabMasterPro</p>
+                    <p id="info">
+                      Organizes browser tabs into groups and sessions.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={View} alt="" />
+                <div className="info-container">
+                  <img src={View} alt="" />
+                  <div className="info-extension">
+                    <p id="title">ViewportBuddy</p>
+                    <p id="info">
+                      Simulates various screen resolutions directly within the
+                      browser.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={Markup} alt="" />
+                <div className="info-container">
+                  <img src={Markup} alt="" />
+                  <div className="info-extension">
+                    <p id="title">Markup Notes</p>
+                    <p id="info">
+                      Enables annotation and notes directly onto webpages for
+                      collaborative debugging.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={Grid} alt="" />
+                <div className="info-container">
+                  <img src={Grid} alt="" />
+                  <div className="info-extension">
+                    <p id="title">GridGuides</p>
+                    <p id="info">
+                      Overlay customizable grids and alignment guides on any
+                      webpage.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={Palette} alt="" />
+                <div className="info-container">
+                  <img src={Palette} alt="" />
+                  <div className="info-extension">
+                    <p id="title">Palette Picker</p>
+                    <p id="info">
+                      Instantly extracts color palettes from any webpages.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={LinkChecker} alt="" />
+                <div className="info-container">
+                  <img src={LinkChecker} alt="" />
+                  <div className="info-extension">
+                    <p id="title">LinkChecker</p>
+                    <p id="info">
+                      Scans and highlights broken links on any pages.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={DOM} alt="" />
+                <div className="info-container">
+                  <img src={DOMSnap} alt="" />
+                  <div className="info-extension">
+                    <p id="title">DOM Snapshot</p>
+                    <p id="info">Capture and export DOM structures quickly.</p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+
+                  <SwitchesSize />
+                </div>
               </div>
               <div className="extension">
-                <img src={Console} alt="" />
+                <div className="info-container">
+                  <img src={Console} alt="" />
+                  <div className="info-extension">
+                    <p id="title">ConsolePlus</p>
+                    <p id="info">
+                      Enhanced developer console with advanced filtering and
+                      logging.
+                    </p>
+                  </div>
+                </div>
+                <div className="button-remove-add">
+                  <button>Remove</button>
+                  <SwitchesSize />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <button type=""></button>
     </>
   );
 }

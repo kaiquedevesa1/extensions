@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "NotoSans";
+  src: url("/src/assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
+}
+
 html,
 body {
   height: 100%;
   background-color: #0a143d;
+  font-family: "NotoSans", sans-serif;
 }
 
 .content {
@@ -52,7 +58,14 @@ body {
   align-items: center;
   background-color: #2f364b;
   padding: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
   border-radius: 5px;
+}
+
+.dark-mode:hover {
+  border-color: #f25c54;
+  background-color: #545969;
 }
 
 .extension-buttons {
@@ -76,31 +89,36 @@ body {
 }
 
 .container-buttons button {
-  border: none;
   background-color: #2f364b;
   background-color: none;
   border: 1px solid #545969;
   padding: 10px 20px;
   border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
   color: white;
   cursor: pointer;
 }
 
 .container-buttons button:hover {
+  border-color: #f25c54;
+}
+
+.container-buttons button:hover {
   background-color: #545969;
+  transition: all 0.3s ease;
 }
 
 .container-extensions {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
   padding-top: 40px;
 }
 
 .extensions-list {
   display: grid;
-  align-items: flex-start;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   width: 100%;
@@ -108,8 +126,8 @@ body {
 
 .extension {
   display: flex;
-
   color: white;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 12px;
   background-color: #212636;
@@ -119,21 +137,47 @@ body {
   padding: 16px;
 }
 
-.img {
+.info-container {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  gap: 15px;
   width: 100%;
+  padding-bottom: 24px;
 }
 
 .info-extension {
-  display: flex;
   width: 100%;
   gap: 12px;
+}
+
+#info {
+  color: #c7c7c7;
+  font-size: 12px;
 }
 
 .button-remove-add {
   width: 100%;
   display: flex;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
   justify-content: space-between;
+}
+
+.button-remove-add button:hover {
+  border-color: #f25c54;
+  background-color: #545969;
+}
+
+.button-remove-add button {
+  border: none;
+  background-color: #212636;
+  color: white;
+  border: 1px solid #545969;
+  border-radius: 24px;
+  font-size: 12px;
+  padding: 10px 24px;
+}
+
+switch {
+  border: 3px solid #f25c54;
 }

@@ -53,7 +53,7 @@ body {
   width: 150px;
 }
 
-.dark-mode {
+.icon-dark-mode {
   display: flex;
   align-items: center;
   background-color: #2f364b;
@@ -63,9 +63,14 @@ body {
   border-radius: 5px;
 }
 
-.dark-mode:hover {
+.icon-dark-mode:hover {
   border-color: #f25c54;
   background-color: #545969;
+}
+
+.light-mode {
+  background-color: #d6e2f5;
+  color: #09153e;
 }
 
 .extension-buttons {
@@ -107,6 +112,10 @@ body {
 .container-buttons button:hover {
   background-color: #545969;
   transition: all 0.3s ease;
+}
+
+.container-buttons-ligth-mode button {
+  background-color: #ededed;
 }
 
 .container-extensions {

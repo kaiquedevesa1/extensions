@@ -1,5 +1,5 @@
 import "./App.css";
-
+import React, { useState } from "react";
 import logo from "./assets/images/logo-dark.png";
 import icon from "./assets/images/icon-sun.svg";
 import DevLens from "./assets/images/logo-devlens.svg";
@@ -18,20 +18,42 @@ import Console from "./assets/images/logo-console-plus.svg";
 import SwitchesSize from "./assets/components/Button";
 
 function App() {
+  const [isLightMode, setIsLightMode] = useState(false); // false significa modo escuro inicialmente
+
+  const toggleMode = () => {
+    setIsLightMode(true); // Quando clicar na div dark-mode, mudar para modo claro
+  };
+
   return (
     <>
-      <div className="content">
-        <div className="content-container">
+      <div
+        className={isLightMode ? " content light-mode" : " content dark-mode"}
+      >
+        <div
+          className={
+            isLightMode
+              ? " content-container light-mode"
+              : " content-container dark-mode"
+          }
+        >
           <div className="container-logo-mode">
             <div className="logo">
               <img id="extension" src={logo} alt="" />
-              <div className="dark-mode">
+              <div
+                className="icon-dark-mode"
+                onClick={toggleMode}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={icon} alt="" />
               </div>
             </div>
           </div>
           <div className="extension-buttons">
-            <div className="filter">
+            <div
+              className={
+                isLightMode ? "filter light-mode" : " filter dark-mode"
+              }
+            >
               <div className="title">
                 <h1>Extension List</h1>
               </div>

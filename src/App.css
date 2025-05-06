@@ -4,16 +4,15 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  background-color: #0a143d;
+  font-family: "NotoSans", sans-serif;
+}
+
 @font-face {
   font-family: "NotoSans";
   src: url("/src/assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
-}
-
-html,
-body {
-  height: 100%;
-  background-color: #0a143d;
-  font-family: "NotoSans", sans-serif;
 }
 
 .content {
@@ -24,7 +23,7 @@ body {
 
 .content-container {
   width: 80%;
-  height: auto;
+  height: 100%;
   background-color: #09153e;
   display: flex;
   flex-direction: column;
@@ -50,7 +49,7 @@ body {
 }
 
 .logo-light {
-  background-color: #ededed;
+  background-color: #fbfdfe;
 }
 
 #extension {
@@ -73,7 +72,7 @@ body {
 }
 
 .blight {
-  background-color: #d6e2f5;
+  background-color: #ededed;
 }
 
 .button-mode:hover {
@@ -124,7 +123,7 @@ body {
 
 .buttons-light button {
   background-color: none;
-  background-color: #ededed;
+  background-color: #fbfdfe;
   color: #0a143d;
   border: 1px solid #545969;
   padding: 10px 20px;
@@ -135,11 +134,7 @@ body {
 }
 
 .buttons-light button:hover {
-  background-color: #d6e2f5;
-}
-
-.buttons-light button:hover {
-  background-color: #d6e2f5;
+  background-color: #ededed;
 }
 
 .container-buttons button:hover {
@@ -179,8 +174,10 @@ body {
   padding: 16px;
 }
 
-.extension-light {
-  background-color: #ededed;
+.light {
+  background-color: #fbfdfe;
+  border: 1px solid #c7c7c7;
+  color: #0a143d;
 }
 
 .info-container {
@@ -199,6 +196,10 @@ body {
 #info {
   color: #c7c7c7;
   font-size: 12px;
+}
+
+.info-light {
+  color: #545969;
 }
 
 .button-remove-add {
@@ -224,6 +225,15 @@ body {
   padding: 10px 24px;
 }
 
-switch {
+.button-light button {
+  background-color: #fbfdfe;
+  color: #09153e;
+}
+
+.button-light button:hover {
+  background-color: #ededed;
+}
+
+.button-remove-add switch {
   border: 3px solid #f25c54;
 }

@@ -49,11 +49,20 @@ body {
   background-color: #212636;
 }
 
+.logo-light {
+  background-color: #ededed;
+}
+
 #extension {
   width: 150px;
 }
 
-.icon-dark-mode {
+#extension-light {
+  width: 140px;
+  padding-left: 10px;
+}
+
+.button-mode {
   display: flex;
   align-items: center;
   background-color: #2f364b;
@@ -63,7 +72,11 @@ body {
   border-radius: 5px;
 }
 
-.icon-dark-mode:hover {
+.blight {
+  background-color: #d6e2f5;
+}
+
+.button-mode:hover {
   border-color: #f25c54;
   background-color: #545969;
 }
@@ -77,6 +90,10 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.title-light {
+  color: #0a143d;
 }
 
 .filter {
@@ -93,7 +110,7 @@ body {
   gap: 15px;
 }
 
-.container-buttons button {
+.buttons-dark button {
   background-color: #2f364b;
   background-color: none;
   border: 1px solid #545969;
@@ -105,17 +122,33 @@ body {
   cursor: pointer;
 }
 
+.buttons-light button {
+  background-color: none;
+  background-color: #ededed;
+  color: #0a143d;
+  border: 1px solid #545969;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.buttons-light button:hover {
+  background-color: #d6e2f5;
+}
+
+.buttons-light button:hover {
+  background-color: #d6e2f5;
+}
+
 .container-buttons button:hover {
   border-color: #f25c54;
 }
 
-.container-buttons button:hover {
+.buttons-dark button:hover {
   background-color: #545969;
   transition: all 0.3s ease;
-}
-
-.container-buttons-ligth-mode button {
-  background-color: #ededed;
 }
 
 .container-extensions {
@@ -144,6 +177,10 @@ body {
   border: 1px solid #545969;
   border-radius: 10px;
   padding: 16px;
+}
+
+.extension-light {
+  background-color: #ededed;
 }
 
 .info-container {

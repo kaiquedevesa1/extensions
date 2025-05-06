@@ -1,7 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
 import logo from "./assets/images/logo-dark.png";
-import icon from "./assets/images/icon-sun.svg";
+import LogoL from "./assets/images/logo.svg";
+import Light from "./assets/images/icon-sun.svg";
+import Dark from "./assets/images/icon-moon.svg";
 import DevLens from "./assets/images/logo-devlens.svg";
 import StyleSpy from "./assets/images/logo-style-spy.svg";
 import SpeedBoost from "./assets/images/logo-speed-boost.svg";
@@ -14,14 +16,13 @@ import Palette from "./assets/images/logo-palette-picker.svg";
 import LinkChecker from "./assets/images/logo-link-checker.svg";
 import DOMSnap from "./assets/images/logo-dom-snapshot.svg";
 import Console from "./assets/images/logo-console-plus.svg";
-
 import SwitchesSize from "./assets/components/Button";
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(false); // false significa modo escuro inicialmente
 
   const toggleMode = () => {
-    setIsLightMode(true); // Quando clicar na div dark-mode, mudar para modo claro
+    setIsLightMode((prev) => !prev); // Alterna entre true e false
   };
 
   return (
@@ -37,14 +38,18 @@ function App() {
           }
         >
           <div className="container-logo-mode">
-            <div className="logo">
-              <img id="extension" src={logo} alt="" />
+            <div className={isLightMode ? "logo logo-light" : "logo"}>
+              <img
+                id={isLightMode ? "extension-light" : "extension"}
+                src={isLightMode ? LogoL : logo}
+                alt=""
+              />
               <div
-                className="icon-dark-mode"
+                className={isLightMode ? "button-mode blight" : "button-mode"}
                 onClick={toggleMode}
                 style={{ cursor: "pointer" }}
               >
-                <img src={icon} alt="" />
+                <img src={isLightMode ? Dark : Light} alt="Icone" />
               </div>
             </div>
           </div>
@@ -54,11 +59,17 @@ function App() {
                 isLightMode ? "filter light-mode" : " filter dark-mode"
               }
             >
-              <div className="title">
+              <div className={isLightMode ? "title-light" : "title "}>
                 <h1>Extension List</h1>
               </div>
 
-              <div className="container-buttons">
+              <div
+                className={
+                  isLightMode
+                    ? " container-buttons buttons-light"
+                    : " container-buttons buttons-dark"
+                }
+              >
                 <button>All</button>
                 <button>Active</button>
                 <button>Inactive</button>

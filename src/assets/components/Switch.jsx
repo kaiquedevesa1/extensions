@@ -1,11 +1,11 @@
 import React from "react";
 import Switch from "@mui/material/Switch";
 
-export default function ColoredSwitch({ isChecked, onChange }) {
+const SwitchesSize = ({ isChecked, onChange }) => {
   return (
     <Switch
       checked={isChecked}
-      onChange={onChange}
+      onChange={(event, checked) => onChange(checked)}
       sx={{
         "& .MuiSwitch-track": {
           border: "1px solid transparent",
@@ -21,4 +21,6 @@ export default function ColoredSwitch({ isChecked, onChange }) {
       }}
     />
   );
-}
+};
+
+export default SwitchesSize;

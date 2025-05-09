@@ -8,6 +8,12 @@ html,
 body {
   background-color: #0a143d;
   font-family: "NotoSans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.body-light {
+  background-color: #d6e2f5;
 }
 
 @font-face {
@@ -24,7 +30,7 @@ body {
 .content-container {
   width: 80%;
   height: 100%;
-  background-color: #09153e;
+  background-color: #0a143d;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +88,7 @@ body {
 
 .light-mode {
   background-color: #d6e2f5;
-  color: #09153e;
+  color: #0a143d;
 }
 
 .extension-buttons {

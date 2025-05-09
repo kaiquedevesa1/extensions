@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import DevLens from "../../assets/Images/logo-devlens.svg";
 import StyleSpy from "../../assets/Images/logo-style-spy.svg";
 import SpeedBoost from "../../assets/Images/logo-speed-boost.svg";
@@ -12,7 +11,7 @@ import Palette from "../../assets/Images/logo-palette-picker.svg";
 import LinkChecker from "../../assets/Images/logo-link-checker.svg";
 import DOMSnap from "../../assets/Images/logo-dom-snapshot.svg";
 import Console from "../../assets/Images/logo-console-plus.svg";
-import SwitchesSize from "./Button";
+import SwitchesSize from "./Switch";
 
 const extensionsStatic = [
   {
@@ -103,16 +102,15 @@ const extensionsStatic = [
 
 function Extensions({ isLightMode, filter }) {
   const [extensionList, setExtensionList] = useState(extensionsStatic);
+  const desativarExtensao = (id) => {
+    toggleExtension(id, false);
+  };
 
-  // Log para confirmar o filtro recebido atual
-  useEffect(() => {
-    console.log("Filtro ativo no componente Extensions:", filter);
-  }, [filter]);
-
-  const toggleExtension = (id) => {
+  // Atualizado para receber o novo valor ativo booleano e atualizar explicitamente
+  const toggleExtension = (id, newActive) => {
     setExtensionList((prevExtensions) =>
       prevExtensions.map((ext) =>
-        ext.id === id ? { ...ext, active: !ext.active } : ext
+        ext.id === id ? { ...ext, active: newActive } : ext
       )
     );
   };
@@ -122,6 +120,11 @@ function Extensions({ isLightMode, filter }) {
     if (filter === "inactive") return !ext.active;
     return true;
   });
+
+  useEffect(() => {
+    document.body.classList.remove("body-light", "dark");
+    document.body.classList.add(isLightMode ? "body-light" : "dark");
+  }, [isLightMode]);
 
   return (
     <div className="extensions-list">
@@ -136,6 +139,7 @@ function Extensions({ isLightMode, filter }) {
               </p>
             </div>
           </div>
+
           <div
             className={
               isLightMode
@@ -143,10 +147,11 @@ function Extensions({ isLightMode, filter }) {
                 : "button-remove-add"
             }
           >
-            <button>Remove</button>
+            <button onClick={() => desativarExtensao(ext.id)}>Remove</button>
+
             <SwitchesSize
-              isOn={ext.active}
-              onClick={() => toggleExtension(ext.id)}
+              isChecked={ext.active}
+              onChange={(checked) => toggleExtension(ext.id, checked)}
             />
           </div>
         </div>

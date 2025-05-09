@@ -1,12 +1,20 @@
-# React + Vite
+# 🧩 Extension Manager UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação React para gerenciar extensões de navegador com foco em organização, usabilidade e design responsivo.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Listagem de extensões com nome, descrição e ícone
+- Alternância entre **modo claro e escuro**
+- Filtros para visualizar extensões **ativas**, **inativas** ou **todas**
+- Sistema de **toggle** (on/off) para ativar ou desativar extensões
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React.js](https://reactjs.org/)
+- JavaScript (ES6+)
+- CSS Modules
+- Hooks (useState, useEffect)
+
+## 📂 Estrutura de Arquivos
+

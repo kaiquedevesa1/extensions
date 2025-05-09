@@ -8,6 +8,7 @@ import Extensions from "./assets/components/Extensions";
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(false); // false significa modo escuro inicialmente
+  const [filter, setFilter] = useState("all");
 
   const toggleMode = () => {
     setIsLightMode((prev) => !prev); // Alterna entre true e false
@@ -15,14 +16,12 @@ function App() {
 
   return (
     <>
-      <div
-        className={isLightMode ? " content light-mode" : " content dark-mode"}
-      >
+      <div className={isLightMode ? "content light-mode" : "content dark-mode"}>
         <div
           className={
             isLightMode
-              ? " content-container light-mode"
-              : " content-container dark-mode"
+              ? "content-container light-mode"
+              : "content-container dark-mode"
           }
         >
           <div className="container-logo-mode">
@@ -43,33 +42,29 @@ function App() {
           </div>
           <div className="extension-buttons">
             <div
-              className={
-                isLightMode ? "filter light-mode" : " filter dark-mode"
-              }
+              className={isLightMode ? "filter light-mode" : "filter dark-mode"}
             >
-              <div className={isLightMode ? "title-light" : "title "}>
+              <div className={isLightMode ? "title-light" : "title"}>
                 <h1>Extension List</h1>
               </div>
-
               <div
                 className={
                   isLightMode
-                    ? " container-buttons buttons-light"
-                    : " container-buttons buttons-dark"
+                    ? "container-buttons buttons-light"
+                    : "container-buttons buttons-dark"
                 }
               >
-                <button>All</button>
-                <button>Active</button>
-                <button>Inactive</button>
+                <button onClick={() => setFilter("all")}>All</button>
+                <button onClick={() => setFilter("active")}>Active</button>
+                <button onClick={() => setFilter("inactive")}>Inactive</button>
               </div>
             </div>
           </div>
           <div className="container-extensions">
-            <Extensions islightMode={isLightMode} />
+            <Extensions isLightMode={isLightMode} filter={filter} />
           </div>
         </div>
       </div>
-      <button type=""></button>
     </>
   );
 }

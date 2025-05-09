@@ -102,7 +102,7 @@ const extensionsStatic = [
 
 function Extensions({ isLightMode, filter }) {
   const [extensionList, setExtensionList] = useState(extensionsStatic);
-  const desativarExtensao = (id) => {
+  const removeExtensao = (id) => {
     toggleExtension(id, false);
   };
 
@@ -146,7 +146,7 @@ function Extensions({ isLightMode, filter }) {
                 : "button-remove-add"
             }
           >
-            <button onClick={() => desativarExtensao(ext.id)}>Remove</button>
+            <button onClick={() => removeExtensao(ext.id)}>Remove</button>
 
             <SwitchesSize
               isChecked={ext.active}

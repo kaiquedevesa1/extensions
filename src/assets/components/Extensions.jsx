@@ -106,7 +106,6 @@ function Extensions({ isLightMode, filter }) {
     toggleExtension(id, false);
   };
 
-  // Atualizado para receber o novo valor ativo booleano e atualizar explicitamente
   const toggleExtension = (id, newActive) => {
     setExtensionList((prevExtensions) =>
       prevExtensions.map((ext) =>

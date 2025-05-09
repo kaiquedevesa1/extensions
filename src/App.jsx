@@ -7,11 +7,11 @@ import Dark from "./assets/images/icon-moon.svg";
 import Extensions from "./assets/components/Extensions";
 
 function App() {
-  const [isLightMode, setIsLightMode] = useState(false); // false significa modo escuro inicialmente
+  const [isLightMode, setIsLightMode] = useState(false);
   const [filter, setFilter] = useState("all");
 
   const toggleMode = () => {
-    setIsLightMode((prev) => !prev); // Alterna entre true e false
+    setIsLightMode((prev) => !prev);
   };
 
   return (

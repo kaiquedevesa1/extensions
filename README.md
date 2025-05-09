@@ -16,5 +16,4 @@ Uma aplicação React para gerenciar extensões de navegador com foco em organiz
 - CSS Modules
 - Hooks (useState, useEffect)
 
-## 📂 Estrutura de Arquivos
 
